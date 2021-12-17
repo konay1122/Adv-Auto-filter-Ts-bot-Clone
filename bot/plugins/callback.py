@@ -143,7 +143,7 @@ async def cb_navg(bot, update: CallbackQuery):
     reply_markup = InlineKeyboardMarkup(temp_results)
 
 
-    text=f"**😃Got it \n\nYour Query 👉 {query}**"
+    text=f"**😃တွေ့ပီကွ \n\nသင်ရှာလိုက်တဲ့အဖြေက ဒါလေးပါ 👉 {query}**"
         
     try:
         await update.message.edit(
@@ -179,7 +179,7 @@ async def cb_settings(bot, update: CallbackQuery):
     bot_fname= bot_status.first_name
     
     text =f"<i>{bot_fname}'s</i> Settings Pannel.....\n"
-    text+=f"\n<i>You Can Use This Menu To Change Connectivity And Know Status Of Your Every Connected Channel, Change Filter Types, Configure Filter Results And To Know Status Of Your Group...</i>"
+    text+=f"\n<i>ဒီဆက်တင်သုံးပီးရှူရှောင်လုပ်ရတယ်ပြောတာပါ။ဘာမှ မဟုပ်ဘူး။အော်တိုင်းပဲထား။ကလိလိုက်မှ ရွာလယ်သွားမယ်...</i>"
     
     buttons = [
         [
@@ -246,23 +246,23 @@ async def cb_warn(bot, update: CallbackQuery):
     channel_id, channel_name, action = re.findall(r"warn\((.+)\)", query_data)[0].split("|", 2)
     
     if action == "connect":
-        text=f"<i>Are You Sure You Want To Enable Connection With</i> <code>{channel_name}</code><i>..???</i>\n"
-        text+=f"\n<i>This Will Show File Links From</i> <code>{channel_name}</code> <i>While Showing Results</i>..."
+        text=f"<i>သင်ဖွင့်မှာသေချာလား</i> <code>{channel_name}</code><i>..???</i>\n"
+        text+=f"\n<i>ဒါက လင့်ကိုပြပေးမှာနော် </i> <code>{channel_name}</code> <i>အဖြေပေးတဲ့ချိန်မှာ</i>..."
     
     elif action == "disconnect":
-        text=f"<i>Are You Sure You Want To Disable</i> <code>{channel_name}</code> <i>Connection With The Group???....</i>\n"
-        text+=f"\n<i>The DB Files Will Still Be There And You Can Connect Back To This Channel Anytime From Settings Menu Without Adding Files To DB Again...</i>\n"
+        text=f"<i>သင်ပိတ်မှာသေချာလား</i> <code>{channel_name}</code> <i>ဒီဂရုနဲ့ချိတ်ထားတာကို???....</i>\n"
+        text+=f"\n<i>သိမ်းထားတဲ့ဒေတာကမပျက်ပါဘူး၊ကြိုတ်တဲ့ချိန်ပြန်ချတ်လဲရတယ်၊ သဘောပဲ...</i>\n"
         text+=f"\n<i>This Disabling Just Hide Results From The Filter Results...</i>"
     
     elif action == "c_delete":
-        text=f"<i>Are You Sure You Want To Disconnect</i> <code>{channel_name}</code> <i>From This Group??</i>\n"
-        text+=f"\n<i><b>This Will Delete Channel And All Its Files From DB Too....!!</b></i>\n"
-        text+=f"\nYou Need To Add Channel Again If You Need To Shows It Result..."
+        text=f"<i>သင်ဖြုတ်မှာသေချာပါသလား</i> <code>{channel_name}</code> <i>ဒီဂရုနဲ့??</i>\n"
+        text+=f"\n<i><b>ဒါက ဒေတာတွေအကုန်ဖျက်မှာနော်သေချာလား....!!</b></i>\n"
+        text+=f"\nချယ်နယ်ထပ်အပ် ပီးရင်အဖြေကိုစောင့်ကြည့်..."
         
     
     elif action=="f_delete":
-        text=f"<i>Are You Sure That You Want To Clear All Filter From This Chat</i> <code>{channel_name}</code><i>???</i>\n"
-        text+=f"\n<i>This Will Erase All Files From DB..</i>"
+        text=f"<i>သင်ဒေတာတွေအကုန်ဖျက်မှာသေချာပါသလား</i> <code>{channel_name}</code><i>???</i>\n"
+        text+=f"\n<i>ဒါကချယ်နယ်နဲ့ဒေတာတွေကိုဖျက်သွားမှာနော်..</i>"
         
     buttons = [
         [
@@ -306,7 +306,7 @@ async def cb_channel_list(bot, update: CallbackQuery):
         
     chat_id =  re.findall(r"channel_list\((.+)\)", query_data)[0]
     
-    text = "<i>Semms Like You Dont Have Any Channel Connected...</i>\n\n<i>Connect To Any Chat To Continue With This Settings...</i>"
+    text = "<i>ငါ့အထင်တော့ချိတ်ထားတဲ့ချယ်နယ်မရှိဘူးထင်တယ်...</i>\n\n<i>ချယ်နယ်တစ်ခုခုချိတ်ပီပြန်စမ်းကြည့် ဒါကို...</i>"
     
     db_list = await db.find_chat(int(chat_id))
     
@@ -346,12 +346,12 @@ async def cb_channel_list(bot, update: CallbackQuery):
 
     if channel_name_list:
         
-        text=f"<i>List Of Connected Channels With <code>{chat_name}</code> With There Settings..</i>\n"
+        text=f"<i>ချိတ်ထားတဲ့ချာနယ်လစ်ပေါ့<code>{chat_name}</code> ဒီဂရုဆက်တင်နဲ့..</i>\n"
     
         for x in range(1, (len(channel_name_list)+1)):
             text+=f"\n<code>{x}. {channel_name_list[x-1]}</code>\n"
     
-        text += "\nChoose Appropriate Buttons To Navigate Through Respective Channels"
+        text += "\nကြိုက်တာနှိပ်နော်၊အားမနာနဲ့၊ကိုဖြစ်ကိုခံပဲ"
     
         
         btn_key = [
@@ -424,11 +424,11 @@ async def cb_info(bot, update: CallbackQuery):
         active_chats = False
         status = "Disconnected"
 
-    text=f"<i>Info About <b>{channel_name}</b></i>\n"
-    text+=f"\n<i>Channel Name:</i> <code>{channel_name}</code>\n"
-    text+=f"\n<i>Channel ID:</i> <code>{channel_id}</code>\n"
-    text+=f"\n<i>Channel Files:</i> <code>{f_count}</code>\n"
-    text+=f"\n<i>Current Status:</i> <code>{status}</code>\n"
+    text=f"<i>အင်ဖိုအဘောက် <b>{channel_name}</b></i>\n"
+    text+=f"\n<i>ချယ်နယ်နာမည်:</i> <code>{channel_name}</code>\n"
+    text+=f"\n<i>ချယ်နယ်အမှတ်:</i> <code>{channel_id}</code>\n"
+    text+=f"\n<i>ချယ်နယ်တွင်းဒေတာ:</i> <code>{f_count}</code>\n"
+    text+=f"\n<i>လက်ရှိခြေနေ:</i> <code>{status}</code>\n"
 
 
     if active_chats:
@@ -513,12 +513,12 @@ async def cb_connect(bot, update: CallbackQuery):
         await update.answer(f"{channel_name} Is Aldready in Active Connection", show_alert=True)
         return
 
-    text= f"<i>Sucessfully Connected To</i> <code>{channel_name}</code>\n"
-    text+=f"\n<i>Info About <b>{channel_name}</b></i>\n"
-    text+=f"\n<i>Channel Name:</i> <code>{channel_name}</code>\n"
-    text+=f"\n<i>Channel ID:</i> <code>{channel_id}</code>\n"
-    text+=f"\n<i>Channel Files:</i> <code>{f_count}</code>\n"
-    text+=f"\n<i>Current Status:</i> <code>Connected</code>\n"
+    text= f"<i>အောင်မြင်သွားပါပီဒါကိုချိတ်လို</i> <code>{channel_name}</code>\n"
+    text+=f"\n<i>အင်ဖိုအဘောက် <b>{channel_name}</b></i>\n"
+    text+=f"\n<i>ချယ်နယ်နာမည်:</i> <code>{channel_name}</code>\n"
+    text+=f"\n<i>ချယ်နယ်အမှတ်:</i> <code>{channel_id}</code>\n"
+    text+=f"\n<i>ချယ်နယ်တွင်းဒေတာ:</i> <code>{f_count}</code>\n"
+    text+=f"\n<i>လက်ရှိခြေနေ:</i> <code>Connected</code>\n"
 
     buttons = [
                 [
@@ -582,15 +582,15 @@ async def cb_disconnect(bot, update: CallbackQuery):
     remove_active = await db.del_active(chat_id, int(channel_id))
     
     if not remove_active:
-        await update.answer("Couldnt Full Fill YOur Request...\n Report This @CrazyBotszGrp Along With Bot's Log", show_alert=True)
+        await update.answer("Couldnt Full Fill YOur Request...\n Report This @nas0055 Along With Bot's Log", show_alert=True)
         return
     
-    text= f"<i>Sucessfully Disconnected From</i> <code>{channel_name}</code>\n"
-    text+=f"\n<i>Info About <b>{channel_name}</b></i>\n"
-    text+=f"\n<i>Channel Name:</i> <code>{channel_name}</code>\n"
-    text+=f"\n<i>Channel ID:</i> <code>{channel_id}</code>\n"
-    text+=f"\n<i>Channel Files:</i> <code>{f_count}</code>\n"
-    text+=f"\n<i>Current Status:</i> <code>Disconnected</code>\n"
+    text= f"<i>အောင်မြင်စွာဖြုတ်ပီးကြောင်း</i> <code>{channel_name}</code>\n"
+    text+=f"\n<i>အင်ဖိုအဘောက် <b>{channel_name}</b></i>\n"
+    text+=f"\n<i>ချယ်နယ်နာမည်:</i> <code>{channel_name}</code>\n"
+    text+=f"\n<i>ချယ်နယ်အမှတ်:</i> <code>{channel_id}</code>\n"
+    text+=f"\n<i>ချယ်နယ်တွင်းဒေတာ:</i> <code>{f_count}</code>\n"
+    text+=f"\n<i>လက်ရှိခြေနေ:</i> <code>Disconnected</code>\n"
     
     buttons = [ 
                 [
@@ -656,7 +656,7 @@ async def cb_channel_delete(bot, update: CallbackQuery):
     f_delete = await db.del_filters(chat_id, channel_id)
 
     if (c_delete and f_delete ):
-        text=f"<code>{channel_name} [ {channel_id} ]</code> Has Been Sucessfully Deleted And All Its Files Were Cleared From DB...."
+        text=f"<code>{channel_name} [ {channel_id} ]</code> သင့်ဒေတာတွေအကုန်ဖျက်သွားပီးပီ...."
 
     else:
         text=f"<i>Couldn't Delete Channel And All Its Files From DB Sucessfully....</i>\n<i>Please Try Again After Sometimes...Also Make Sure To Check The Logs..!!</i>"
@@ -704,11 +704,11 @@ async def cb_filters_delete(bot, update: CallbackQuery):
     f_delete = await db.del_filters(chat_id, int(channel_id))
 
     if not f_delete:
-        text="<b><i>Oops..!!</i></b>\n\nEncountered Some Error While Deleteing Filters....\nPlease Check The Logs...."
+        text="<b><i>ဟရောင်..!!</i></b>\n\nစွတ်ဖျက်မနေနဲ့၊....\nဘော့လော့ကိုပြန်စစ်...."
         await update.answer(text=text, show_alert=True)
         return
 
-    text =f"All Filters Of <code>{channel_id}[{channel_name}]</code> Has Been Deleted Sucessfully From My DB.."
+    text =f"ဒီမှာထည့်ထားသမျှ <code>{channel_id}[{channel_name}]</code> သင့်ဒေတာတွေအကုန်ဖျက်သွားပီးပီ.."
 
     buttons=[
         [
@@ -790,8 +790,8 @@ async def cb_types(bot, update: CallbackQuery):
         acb_data = f"toggle({chat_id}|audio|True)"
 
     
-    text+="\n<i>Below Buttons Will Toggle Respective Media Types As Enabled Or Disabled....\n</i>"
-    text+="<i>This Will Take Into Action As Soon As You Change Them....</i>"
+    text+="\n<i>ခလုပ်တွေကတော်ဂယ်ပါ၊လုပ်မယ်/မလုပ်ဘူး....\n</i>"
+    text+="<i>ဒါကချက်ချင်းသက်ရောက်တယ်နှိပ်လိုက်တာနဲ့....</i>"
     
     buttons.append([InlineKeyboardButton(f"Video Index: {v_e}", callback_data=vcb_data)])
     buttons.append([InlineKeyboardButton(f"Audio Index: {a_e}", callback_data=acb_data)])
@@ -858,7 +858,7 @@ async def cb_toggle(bot, update: CallbackQuery):
         await update.answer(text="Filter Types Updated Sucessfully", show_alert=True)
     
     else:
-        text="Something Wrong Please Check Bot Log For More Information...."
+        text="တစ်ခုခုမှားနေတယ်၊ဘော့လော့ကိုပြန်စစ်...."
         await update.answer(text, show_alert=True)
         return
     
@@ -904,8 +904,8 @@ async def cb_toggle(bot, update: CallbackQuery):
         acb_data = f"toggle({chat_id}|audio|True)"
 
     
-    text+="\n<i>Below Buttons Will Toggle Respective Media Types As Enabled Or Disabled....\n</i>"
-    text+="<i>This Will Take Into Action As Soon As You Change Them....</i>"
+    text+="\n<i>ခလုပ်တွေကတော်ဂယ်ပါ၊လုပ်မယ်/မလုပ်ဘူး....\n</i>"
+    text+="<i>ဒါကချက်ချင်းသက်ရောက်တယ်နှိပ်လိုက်တာနဲ့....</i>"
     
     buttons.append([InlineKeyboardButton(f"Video Index : {v_e}", callback_data=vcb_data)])
     buttons.append([InlineKeyboardButton(f"Audio Index : {a_e}", callback_data=acb_data)])
@@ -967,13 +967,13 @@ async def cb_config(bot, update: CallbackQuery):
     
     text+=f"\n - Max Filter Per Page: <code>{mr_count}</code>\n"
 
-    text+=f"\n - Accuracy Percentage: <code>{accuracy_point}</code>\n"
+    text+=f"\n - တိကျမှု: <code>{accuracy_point}</code>\n"
     
-    text+=f"\n - Show Invitation Link: <code>{show_invite}</code>\n"
+    text+=f"\n - အင်ဗိုက်လင့်ပြမပြ: <code>{show_invite}</code>\n"
     
-    text+=f"\n - Provide File In Bot PM: <code>{pm_file_chat}</code>\n"
+    text+=f"\n - ဒေတာကိုပါစင်နယ်ကနေပိုမပို: <code>{pm_file_chat}</code>\n"
     
-    text+="\nAdjust Above Value Using Buttons Below... "
+    text+="\nအပေါ်ကတန်းဖိုးကို အောက်ကခလုပ်နှိပ်ပီးချိန်... "
     buttons=[
         [
             InlineKeyboardButton
@@ -1303,7 +1303,7 @@ async def cb_show_invites(bot, update: CallbackQuery):
             ]
         ]
     
-    text=f"<i>This Config Will Help You To Show Invitation Link Of All Active Chats Along With The Filter Results For The Users To Join.....</i>"
+    text=f"<i>ဒါကချိတ်ထားသမျှချယ်နယ်အကုန်လုံးရဲ့လင့်ကိုပေးမှာ.....</i>"
     
     reply_markup=InlineKeyboardMarkup(buttons)
     
@@ -1364,7 +1364,7 @@ async def cb_pm_file(bot, update: CallbackQuery):
             ]
         ]
     
-    text=f"<i>This Config Will Help You To Enable/Disable File Transfer Through Bot PM Without Redirecting Them To Channel....</i>"
+    text=f"<i>ဒါက ချယ်နယ်ကိုရောက်မယ့်အစား ပါစင်နယ်ကိုတိုက်ရိုက်ပိုမပိုရွေးရမှာ....</i>"
     
     reply_markup=InlineKeyboardMarkup(buttons)
     
@@ -1394,9 +1394,9 @@ async def cb_accuracy(bot, update: CallbackQuery):
 
     val, chat_id = re.findall(r"accuracy\((.+)\)", query_data)[0].split("|", 1)
     
-    text = f"<i>Choose Your Desired 'Accuracy Perceentage' For Every Filter Results Shown In</i> <code>{chat_name}</code>\n\n"
-    text+= f"<i>NB: Higher The Value Better Matching Results Will Be Provided... And If Value Is Lower It Will Show More Results \
-        Which Is Fimilary To Query Search (Wont Be Accurate)....</i>"
+    text = f"<i>အမြဲသေချာတဲ့အဖြေကိုရဖိုတိကျတဲ့နှုန်းကိုရွေးပါ</i> <code>{chat_name}</code>\n\n"
+    text+= f"<i>NB: မြင့်လေလေတိကျမှုရလေလေ... လျှောက်မကလိပါနဲ့၊  ၆၅နဲ့၈၀ပဲရွေး။ \
+        ငါးပါးတွေမှောက်ကုန်မှာဆိုးလို။....</i>"
 
     buttons = [
         [
@@ -1515,11 +1515,11 @@ async def cb_set(bot, update: CallbackQuery):
     append_db = await db.update_configs(chat_id, new)
     
     if not append_db:
-        text="Something Wrong Please Check Bot Log For More Information...."
+        text="တစ်ခုခုမှားနေတယ်၊ဘော့လော့ကိုပြန်စစ်...."
         await update.answer(text=text, show_alert=True)
         return
     
-    text=f"Your Request Was Updated Sucessfully....\nNow All Upcoming Results Will Show According To This Settings..."
+    text=f"သင်တောင်းဆိုတာအဆင့်မြှင့်ပီးပီ....\nနောက်လာသမျှအခုဆက်တင်တိုင်းပြပေးမယ်..."
         
     buttons = [
         [
@@ -1600,16 +1600,16 @@ async def cb_about(bot, update: CallbackQuery):
     if user_id not in VERIFY.get(str(chat_id)):
         return
 
-    text=f"<b><u>Bot's Status</u></b>\n"
-    text+=f"\n<b>Bot's Uptime:</b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
-    text+=f"\n<b>Bot Funtion:</b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b>Bot Support:</b> <a href="https://t.me/Ts_bots">@Ts_Bots</a>\n"""
-    text+="""\n<b>Source Code:</b> <a href="https://github.com/Ts-Bots/Adv-Auto-filter-Ts-bot-Clone">Touch Here 🥰</a>"""
+    text=f"<b><u>ဘော့ရဲ့ခြေနေ</u></b>\n"
+    text+=f"\n<b>ဘော့နိုးချိန်:</b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
+    text+=f"\n<b>ဘော့ရဲ့ဖန်ရှင်:</b> <i>Auto Filter Files</i>\n"
+    text+=f"""\n<b>ဒီဘော့ရဲ့စပိုလုပ်သူ:</b> <a href="https://t.me/nas0055">@Ts_Bots</a>\n"""
+    text+="""\n<b>ဒီဘော့ရဲ့အဓိကကုတ်:</b> <a href="https://t.me/joinchat/HPXE9t6rejEzNDll">Touch Here 🥰</a>"""
     buttons = [
         [
             #InlineKeyboardButton
                 #(
-                    #"😊 DEVELOPER", url="https://t.me/Ts_bots"
+                    #"😊 DEVELOPER", url="https://t.me/nas0055"
                 #),
                 
             InlineKeyboardButton
