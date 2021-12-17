@@ -143,7 +143,7 @@ async def cb_navg(bot, update: CallbackQuery):
     reply_markup = InlineKeyboardMarkup(temp_results)
 
 
-    text=f"**😃တွေ့ပီကွ \n\nသင်ရှာလိုက်တဲ့အဖြေက ဒါလေးပါ 👉 {query}**"
+    text=f"**😃ဟုတ်ပီဗျာ လင့်တော့ရပီ ဝင်မရင် pinned မက်ဆေ့ကလင့်တွေအရင်Join \n\nဒါကသင်ရိုက်လိုက်တဲ့နာမည်ပေါ့ 👉 {query}**"
         
     try:
         await update.message.edit(
@@ -178,19 +178,19 @@ async def cb_settings(bot, update: CallbackQuery):
     bot_status = await bot.get_me()
     bot_fname= bot_status.first_name
     
-    text =f"<i>{bot_fname}'s</i> Settings Pannel.....\n"
+    text =f"<i>{bot_fname}'s</i> ဆက်တင်ပါ.....\n"
     text+=f"\n<i>ဒီဆက်တင်သုံးပီးရှူရှောင်လုပ်ရတယ်ပြောတာပါ။ဘာမှ မဟုပ်ဘူး။အော်တိုင်းပဲထား။ကလိလိုက်မှ ရွာလယ်သွားမယ်...</i>"
     
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "🎬 CHANNELS", callback_data=f"channel_list({chat_id})"
+                    "🎬 ချယ်နယ်", callback_data=f"channel_list({chat_id})"
                 ), 
             
             InlineKeyboardButton
                 (
-                    "🔍 FILTER TYPES", callback_data=f"types({chat_id})"
+                    "🔍 ဖေတာအမျိုးအစား", callback_data=f"types({chat_id})"
                 )
         ],
         [
@@ -1640,7 +1640,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-        InlineKeyboardButton("📫 SUPPORT", url="https://t.me/Ts_Bots"),
+        InlineKeyboardButton("📫 SUPPORT", url="https://t.me/joinchat/HPXE9t6rejEzNDll"),
         InlineKeyboardButton("📕 ABOUT", callback_data="about")
     ],[
         InlineKeyboardButton("💡 HELP", callback_data="help"),
