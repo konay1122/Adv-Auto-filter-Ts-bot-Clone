@@ -1,12 +1,14 @@
-# Auto-filter-Rainbow-Clone
+# Adv-Auto-filter-Ts-bot-Clone
 
 <p align="center"> 
-  <a href="https://github.com/konay1122/Auto-filter-Rainbow-Clone"> 
-    <img src="https://img.shields.io/github/stars/konay1122/Auto-filter-Rainbow-Clone?style=social"> 
+  <a href="https://github.com/konay1122/
+Adv-Auto-filter-Ts-bot-Clone
+"> 
+    <img src="https://img.shields.io/github/stars/konay1122/Adv-Auto-filter-Ts-bot-Clone?style=social"> 
 
   </a> 
    
-  <a href="https://github.com/konay1122/Auto-filter-Rainbow-Clone/fork"> 
+  <a href="https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone/fork"> 
     <img src="https://img.shields.io/github/forks/konay1122/Auto-filter-Rainbow-Clone?label=Fork&style=social"> 
 
   </a>   
@@ -73,7 +75,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary> 
 <p> 
 <br> 
-<a href="https://heroku.com/deploy?template=https://github.com/konay1122/Auto-filter-Rainbow-Clone/tree/main"> 
+<a href="https://heroku.com/deploy?template=https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone/tree/main"> 
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"> 
 </a> 
 </p> 
@@ -82,7 +84,9 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To VPS</summary> 
 <p> 
 <pre> 
-git clone https://github.com/konay1122/Auto-filter-Rainbow-Clone/tree/blob/main 
+git clone https://github.com/konay1122/
+Adv-Auto-filter-Ts-bot-Clone
+/tree/blob/main 
 cd Auto-filter-Rainbow-Clone 
 pip3 install -r requirements.txt 
 # Change The Vars Of bot/__init__.py File Accordingly 
