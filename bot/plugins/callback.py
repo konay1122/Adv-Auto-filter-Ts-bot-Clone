@@ -196,24 +196,24 @@ async def cb_settings(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⚙️ CONFIG", callback_data=f"config({chat_id})"
+                    "⚙️ ကွန်ဖစ်", callback_data=f"config({chat_id})"
                 )
         ], 
         [
             InlineKeyboardButton
                 (
-                    "📋 STATUS", callback_data=f"status({chat_id})"
+                    "📋 ဖေတာခြေနေ", callback_data=f"status({chat_id})"
                 ),
             
             InlineKeyboardButton
                 (
-                    "⏱️ BOT STATUS", callback_data=f"about({chat_id})"
+                    "⏱️ ဘော့ခြေနေ", callback_data=f"about({chat_id})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "🔐 CLOSE", callback_data="close"
+                    "🔐 ပိတ်မယ်", callback_data="close"
                 )
         ]
     ]
@@ -268,12 +268,12 @@ async def cb_warn(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "✅ YES", callback_data=f"{action}({channel_id}|{channel_name})"
+                    "✅ ဟုပီ", callback_data=f"{action}({channel_id}|{channel_name})"
                 ), 
             
             InlineKeyboardButton
                 (
-                    "❎ NO", callback_data="close"
+                    "❎ နိုး", callback_data="close"
                 )
         ]
     ]
@@ -334,12 +334,12 @@ async def cb_channel_list(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data="settings"
+                    "⬇️ နောက်သို", callback_data="settings"
                 ),
             
             InlineKeyboardButton
                 (
-                    "🔐 CLOSE", callback_data="close"
+                    "🔐 ပိတ်မယ်", callback_data="close"
                 )
         ]
     ) 
@@ -436,12 +436,12 @@ async def cb_info(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                "✂️ DISCONNECT", callback_data=f"warn({channel_id}|{channel_name}|disconnect)"
+                                "✂️ ဖြုတ်မယ်", callback_data=f"warn({channel_id}|{channel_name}|disconnect)"
                             ),
                         
                         InlineKeyboardButton
                             (
-                                "❌ DELETE", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                                "❌ ဖျက်မယ်", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                             )
                     ]
         ]
@@ -451,12 +451,12 @@ async def cb_info(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                "🧲 CONNECT", callback_data=f"warn({channel_id}|{channel_name}|connect)"
+                                "🧲 ချိတ်", callback_data=f"warn({channel_id}|{channel_name}|connect)"
                             ),
                         
                         InlineKeyboardButton
                             (
-                                "❌ DELETE", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                                "❌ ဖျက်မယ်", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                             )
                     ]
         ]
@@ -474,7 +474,7 @@ async def cb_info(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"channel_list({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"channel_list({chat_id})"
                     )
             ]
     )
@@ -524,12 +524,12 @@ async def cb_connect(bot, update: CallbackQuery):
                 [
                     InlineKeyboardButton
                         (
-                            "✂️ DISCONNECT", callback_data=f"warn({channel_id}|{channel_name}|disconnect)"
+                            "✂️ ဖြုတ်မယ်", callback_data=f"warn({channel_id}|{channel_name}|disconnect)"
                         ),
                     
                     InlineKeyboardButton
                         (
-                            "❌ DELETE", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
+                            "❌ ဖျက်မယ်", callback_data=f"warn({channel_id}|{channel_name}|c_delete)"
                         )
                 ]
     ]
@@ -547,7 +547,7 @@ async def cb_connect(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"channel_list({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"channel_list({chat_id})"
                     )
             ]
     )
@@ -801,7 +801,7 @@ async def cb_types(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"settings"
+                    "⬇️ နောက်သို", callback_data=f"settings"
                 )
         ]
     )
@@ -915,7 +915,7 @@ async def cb_toggle(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"settings"
+                    "⬇️ နောက်သို", callback_data=f"settings"
                 )
         ]
     )
@@ -1066,43 +1066,43 @@ async def cb_max_buttons(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "5 Filters", callback_data=f"set(per_page|5|{chat_id}|{count})"
+                    "၅ခု", callback_data=f"set(per_page|5|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "10 Filters", callback_data=f"set(per_page|10|{chat_id}|{count})"
+                    "၁၀ခု", callback_data=f"set(per_page|10|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "15 Filters", callback_data=f"set(per_page|15|{chat_id}|{count})"
+                    "၁၅ခု", callback_data=f"set(per_page|15|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "20 Filters", callback_data=f"set(per_page|20|{chat_id}|{count})"
+                    "၂၀ခု", callback_data=f"set(per_page|20|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "25 Filters", callback_data=f"set(per_page|25|{chat_id}|{count})"
+                    "၂၅ခု", callback_data=f"set(per_page|25|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "30 Filters", callback_data=f"set(per_page|30|{chat_id}|{count})"
+                    "၃၀ခု", callback_data=f"set(per_page|30|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"config({chat_id})"
+                    "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                 )
         ]
     ]
@@ -1138,37 +1138,37 @@ async def cb_max_page(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "2 Pages", callback_data=f"set(pages|2|{chat_id}|{count})"
+                    "၂ရွက်", callback_data=f"set(pages|2|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "4 Pages", callback_data=f"set(pages|4|{chat_id}|{count})"
+                    "၄ရွက်", callback_data=f"set(pages|4|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "6 Pages", callback_data=f"set(pages|6|{chat_id}|{count})"
+                    "၆ရွက်", callback_data=f"set(pages|6|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "8 Pages", callback_data=f"set(pages|8|{chat_id}|{count})"
+                    "၈ရွက်", callback_data=f"set(pages|8|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "10 Pages", callback_data=f"set(pages|10|{chat_id}|{count})"
+                    "၁၀ရွက်", callback_data=f"set(pages|10|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"config({chat_id})"
+                    "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                 )
         ]
 
@@ -1205,43 +1205,43 @@ async def cb_max_results(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "50 Results", callback_data=f"set(results|50|{chat_id}|{count})"
+                    "အဖြေ၅၀", callback_data=f"set(results|50|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "100 Results", callback_data=f"set(results|100|{chat_id}|{count})"
+                    "အဖြေ၁၀၀", callback_data=f"set(results|100|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "150 Results", callback_data=f"set(results|150|{chat_id}|{count})"
+                    "အဖြေ၁၅၀", callback_data=f"set(results|150|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "200 Results", callback_data=f"set(results|200|{chat_id}|{count})"
+                    "အဖြေ၂၀၀", callback_data=f"set(results|200|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "250 Results", callback_data=f"set(results|250|{chat_id}|{count})"
+                    "အဖြေ၂၅၀", callback_data=f"set(results|250|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "300 Results", callback_data=f"set(results|300|{chat_id}|{count})"
+                    "အဖြေ၃၀၀", callback_data=f"set(results|300|{chat_id}|{count})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"config({chat_id})"
+                    "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                 )
         ]
     ]
@@ -1282,7 +1282,7 @@ async def cb_show_invites(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"config({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1298,7 +1298,7 @@ async def cb_show_invites(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"config({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1343,7 +1343,7 @@ async def cb_pm_file(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"config({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1359,7 +1359,7 @@ async def cb_pm_file(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "⬇️ BACK", callback_data=f"config({chat_id})"
+                        "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1402,43 +1402,43 @@ async def cb_accuracy(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "100 %", callback_data=f"set(accuracy|1.00|{chat_id}|{val})"
+                    "ရာနှုန်း ၁၀၀", callback_data=f"set(accuracy|1.00|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "80 %", callback_data=f"set(accuracy|0.80|{chat_id}|{val})"
+                    "ရာနှုန်း ၈၀", callback_data=f"set(accuracy|0.80|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "65 %", callback_data=f"set(accuracy|0.65|{chat_id}|{val})"
+                    "ရာနှုန်း ၆၅", callback_data=f"set(accuracy|0.65|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "60 %", callback_data=f"set(accuracy|0.60|{chat_id}|{val})"
+                    "ရာနှုန်း ၆၀", callback_data=f"set(accuracy|0.60|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "55 %", callback_data=f"set(accuracy|0.55|{chat_id}|{val})"
+                    "ရာနှုန်း ၅၅", callback_data=f"set(accuracy|0.55|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "50 %", callback_data=f"set(accuracy|0.50|{chat_id}|{val})"
+                    "ရာနှုန်း ၅၀", callback_data=f"set(accuracy|0.50|{chat_id}|{val})"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"config({chat_id})"
+                    "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                 )
         ]
     ]
@@ -1525,7 +1525,7 @@ async def cb_set(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data=f"config({chat_id})"
+                    "⬇️ နောက်သို", callback_data=f"config({chat_id})"
                 ),
             
             InlineKeyboardButton
@@ -1570,7 +1570,7 @@ async def cb_status(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data="settings"
+                    "⬇️ နောက်သို", callback_data="settings"
                 ),
             
             InlineKeyboardButton
@@ -1614,7 +1614,7 @@ async def cb_about(bot, update: CallbackQuery):
                 
             InlineKeyboardButton
                 (
-                    "⬇️ BACK", callback_data="settings"
+                    "⬇️ နောက်သို", callback_data="settings"
                 )
         ],
         [
