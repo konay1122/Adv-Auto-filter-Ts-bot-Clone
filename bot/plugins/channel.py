@@ -36,25 +36,25 @@ async def connect(bot: Bot, update):
     try:
         if target_chat[1].startswith("@"):
             if len(target_chat[1]) < 5:
-                await update.reply_text("Invalid Username...!!!")
+                await update.reply_text("နာမည်မှားနေတယ်နော် သေချာလုပ်ပါ...!!!")
                 return
             target = target_chat[1]
             
         elif not target_chat[1].startswith("@"):
             if len(target_chat[1]) < 14:
-                await update.reply_text("Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
+                await update.reply_text("ချက်အမှတ်မှာနေတယ်...\nချက်အမှတ်ကဒါမျိုးလေ: <code>-100xxxxxxxxxx</code>")
                 return
             target = int(target_chat[1])
                 
     except Exception:
-        await update.reply_text("Invalid Input...\nYou Should Specify Valid <code>chat_id(-100xxxxxxxxxx)</code> or <code>@username</code>")
+        await update.reply_text("ထည့်ပုံထည့်နည်းကမဟုပ်သေးဘူး...\nသေချာကြည့်လုပ်ပါ <code>chat_id(-100xxxxxxxxxx)</code> or <code>@username</code>")
         return
     
     try:
         join_link = await bot.export_chat_invite_link(target)
     except Exception as e:
         print(e)
-        await update.reply_text(f"Make Sure Im Admin At <code>{target}</code> And Have Permission For '<i>Inviting Users via Link</i>' And Try Again.....!!!")
+        await update.reply_text(f"ဒီဘော့ကိုအက်မင်အနေနဲ့ထည့်ထားလေ <code>{target}</code> And Have Permission For '<i>Inviting Users via Link</i>' ၊အက်မင်ထည့်ပီးပြန်လုပ်ပါ၊.....!!!")
         return
     
     userbot_info = await bot.USER.get_me()
@@ -68,7 +68,7 @@ async def connect(bot: Bot, update):
         pass
     
     except Exception:
-        await update.reply_text(f"My UserBot [{userbot_name}](tg://user?id={userbot_id}) Couldnt Join The Channel `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
+        await update.reply_text(f"my owner ka [{userbot_name}](tg://user?id={userbot_id}) ch join ma htr bu tae `{target}` အက်မင်ထည့်ပီးပြန်လုပ်ပါ၊.....!!")
         return
     
     try:
@@ -77,7 +77,7 @@ async def connect(bot: Bot, update):
         channel_name = c_chat.title
         
     except Exception as e:
-        await update.reply_text("Encountered Some Issue..Please Check Logs..!!")
+        await update.reply_text("တစ်ခုခုမှားနေတယ်၊ဘော့လော့ကိုပြန်စစ်..!!")
         raise e
         
         
@@ -87,7 +87,7 @@ async def connect(bot: Bot, update):
         await update.reply_text("Channel Aldready In Db...!!!")
         return
     
-    wait_msg = await update.reply_text("Please Wait Till I Add All Your Files From Channel To Db\n\n<i>This May Take 10 or 15 Mins Depending On Your No. Of Files In Channel.....</i>\n\nUntil Then Please Dont Sent Any Other Command Or This Operation May Be Intrupted....")
+    wait_msg = await update.reply_text("ချယ်နယိကဒေတာတွေကိုကူးထည့်နေတာမို၊ခနစောင့်ပါ၊\n\n<i>ဒါက ဒေတာများရင်များသလောက်ကြာမှာပါ၊ ၁၀မိနစ်လောက်ပေါ့.....</i>\n\nတခြားဘာမှအမိန့်မပေးရဘူးနော်၊ကူးတာပျက်သွားမယ်....")
     
     try:
         type_list = ["video", "audio", "document"]
@@ -179,14 +179,14 @@ async def connect(bot: Bot, update):
 
         print(f"{skipCT} Files Been Skipped Due To File Name Been None..... #BlameTG")
     except Exception as e:
-        await wait_msg.edit_text("Couldnt Fetch Files From Channel... Please look Into Logs For More Details")
+        await wait_msg.edit_text("channel ka nay br mha ma ya bu phit... log ko thay char sit own")
         raise e
     
     await db.add_filters(data)
     await db.add_chat(chat_id, channel_id, channel_name)
     await recacher(chat_id, True, True, bot, update)
     
-    await wait_msg.edit_text(f"Channel Was Sucessfully Added With <code>{len(data)}</code> Files..")
+    await wait_msg.edit_text(f"ချယ်နယ်အက်တာပီးသွားပါပီ ဒေတာဒီလောက်နဲ့<code>{len(data)}</code> Files..")
 
 
 @Client.on_message(filters.command(["del"]) & filters.group, group=1)
@@ -213,18 +213,18 @@ async def disconnect(bot: Bot, update):
     try:
         if target_chat[1].startswith("@"):
             if len(target_chat[1]) < 5:
-                await update.reply_text("Invalid Username...!!!")
+                await update.reply_text("နာမည်မှားနေတယ်နော် သေချာလုပ်ပါ...!!!")
                 return
             target = target_chat[1]
             
         elif not target_chat.startswith("@"):
             if len(target_chat[1]) < 14:
-                await update.reply_text("Invalid Chat Id...\nChat ID Should Be Something Like This: <code>-100xxxxxxxxxx</code>")
+                await update.reply_text("ချက်အမှတ်မှာနေတယ်...\n၊ချက်အမှတ်ကဒါမျိုးလေ: <code>-100xxxxxxxxxx</code>")
                 return
             target = int(target_chat[1])
                 
     except Exception:
-        await update.reply_text("Invalid Input...\nYou Should Specify Valid chat_id(-100xxxxxxxxxx) or @username")
+        await update.reply_text("ထည့်ပုံထည့်နည်းကမဟုပ်သေးဘူး...\n သေချာကြည့်လုပ်ပါ(-100xxxxxxxxxx) or @username")
         return
     
     userbot = await bot.USER.get_me()
@@ -235,23 +235,23 @@ async def disconnect(bot: Bot, update):
         channel_info = await bot.USER.get_chat(target)
         channel_id = channel_info.id
     except Exception:
-        await update.reply_text(f"My UserBot [{userbot_name}](tg://user?id={userbot_id}) Couldnt Fetch Details Of `{target}` Make Sure Userbot Is Not Banned There Or Add It Manually And Try Again....!!")
+        await update.reply_text(f"ပိုင်ရှင် [{userbot_name}](tg://user?id={userbot_id}) Couldnt Fetch Details Of `{target}` အဲ့ချယ်နယ်မှာ ဘန်းရှင်သုံးလိုမရပါ။....!!")
         return
     
     in_db = await db.in_db(chat_id, channel_id)
     
     if not in_db:
-        await update.reply_text("This Channel Is Not Connected With The Group...")
+        await update.reply_text("group nae channel nae chate ma htr bu loz pya nay tl...")
         return
     
-    wait_msg = await update.reply_text("Deleting All Files Of This Channel From DB....!!!\n\nPlease Be Patience...Dont Sent Another Command Until This Process Finishes..")
-    
+    wait_msg = await update.reply_text("အကုန်ဖျက်မှာနော်....!!!\n\nPlease Be Patience...တခြားအမိန့်မပေးနဲ့ဦးဒါမပီးမချင်း..")
+    တခြားအမိန့်မပေးနဲ့ဦးဒါမပီးမချင်း
     await db.del_filters(chat_id, channel_id)
     await db.del_active(chat_id, channel_id)
     await db.del_chat(chat_id, channel_id)
     await recacher(chat_id, True, True, bot, update)
     
-    await wait_msg.edit_text("Sucessfully Deleted All Files From DB....")
+    await wait_msg.edit_text("ကယ်ဖျက်တာတော့ပီးပီ....")
 
 
 @Client.on_message(filters.command(["delall"]) & filters.group, group=1)
@@ -277,7 +277,7 @@ async def delall(bot: Bot, update):
     await db.delete_all(chat_id)
     await recacher(chat_id, True, True, bot, update)
     
-    await update.reply_text("Sucessfully Deleted All Connected Chats From This Group....")
+    await update.reply_text("kal akone chate htr tha mya del p p....")
 
 
 @Client.on_message(filters.channel & (filters.video | filters.audio | filters.document), group=0)
