@@ -1,5 +1,5 @@
 {
-    "name": "Auto-filter-Rainbow-Clone",
+    "name": "Adv-Auto-filter-Ts-bot-Clone",
     "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
     "logo": "https://telegra.ph/file/cf0c945839fed74e13d9f.jpg",
     "keywords": [
@@ -8,7 +8,7 @@
         "Mongo DB"
     ],
     "website": "https://github.com/konay1122",
-    "repository": "https://github.com/konay1122/Auto-filter-Rainbow-Clone",
+    "repository": "https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone",
     "success_url": "https://www.telegram.dog/allserieslinkchnel_rainbow",
     "env": {
         "APP_ID": {
