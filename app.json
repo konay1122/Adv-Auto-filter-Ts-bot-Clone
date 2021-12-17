@@ -1,15 +1,15 @@
 {
-    "name": "Adv-Filter-Ts-Bot-Clone",
+    "name": "Auto-filter-Rainbow-Clone",
     "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
-    "logo": "https://telegra.ph/file/eee1877ba8a1e7077b2a8.jpg",
+    "logo": "https://telegra.ph/file/cf0c945839fed74e13d9f.jpg",
     "keywords": [
         "Auto",
         "Filter",
         "Mongo DB"
     ],
-    "website": "https://github.com/Ts-bots",
-    "repository": "https://github.com/Ts-Bots/Adv-Auto-filter-Ts-bot-Clone",
-    "success_url": "https://telegram.dog/Ts_bots",
+    "website": "https://github.com/konay1122",
+    "repository": "https://github.com/konay1122/Auto-filter-Rainbow-Clone",
+    "success_url": "https://www.telegram.dog/allserieslinkchnel_rainbow",
     "env": {
         "APP_ID": {
             "description": "Your APP ID From my.telegram.org",
@@ -32,18 +32,18 @@
             "value": ""
         },
         "BOT_NAME": {
-            "description": "Your bot's Name. Default will be Linker",
-            "value": "Linker",
+            "description": "Your bot's Name. Default will be RMC-Auto",
+            "value": "RMC-Auto",
             "required": false
         },
         "GROUP_USERNAME": {
-            "description": "Your Group Username without '@'. Default will be Ts_bots",
-            "value": "Ts_bots", 
+            "description": "Your Group Username without '@'. Default will be RMC-GP",
+            "value": "RMC-GP", 
             "required": false
         },
         "ADMIN_USERNAME": {
-            "description": "Your User Bane without '@'. Default will be Ts_bots",
-            "value": "Ts_Bots", 
+            "description": "Your User Bane without '@'. Default will be N-A-S",
+            "value": "N-A-S", 
             "required": false
         }
     },
