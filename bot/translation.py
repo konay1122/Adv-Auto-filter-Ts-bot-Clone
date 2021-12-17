@@ -60,7 +60,7 @@ currently working for @{}
 
 ○ ᴠᴇʀsɪᴏɴ : 1.0.0
 
-○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://github.com/konay1122/Auto-filter-Rainbow-Clone)
+○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone)
 
 ○ ᴄʀᴇᴀᴛᴏʀ : [@N_A_S](https://t.me/nas0055)
 
