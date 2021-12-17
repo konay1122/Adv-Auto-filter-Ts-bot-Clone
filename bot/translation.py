@@ -60,7 +60,7 @@ class Translation(object):
 
 ○ ဗားရှင်း : 1.0.0
 
-○ ပင်ရင်းကုတ် : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://t.me/kopaing15)
+○ ပင်ရင်းကုတ် : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://t.me/joinchat/HPXE9t6rejEzNDll)
 
 ○ ဖိုးစိတ်ဖြူ : [@N_A_S](https://t.me/nas0055)
 
