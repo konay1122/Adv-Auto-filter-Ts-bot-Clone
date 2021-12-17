@@ -14,36 +14,36 @@ class Translation(object):
 """   
     
     HELP_TEXT = """
-<u>💡 𝐇𝐞𝐥𝐩</u>
+<u>💡 အကူအညီ</u>
 
 <i>
-📌 Add Me To Any Group And Make Me Admin
-📌 Add Me To Your Desired Channel
+📌 ငါ့ကို ကြိုက်တဲ့ ဂရုကိုထည့် ပီးရင် အက်တမင် ပေး
+📌 ပီးတော့ သင်လိုချင်တဲ့ ချယ်နယ် ကိုလဲထည့်
 </i>
 
-<b>🔰 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 (Works Only In Groups) :</b>
+<b>🔰 ငါ့အမိန့်များ (ဒီ အမိန့်မှန်သမျှ ဂရုမှာပဲ လုပ်တာနော်) :</b>
 
     👉 <code>/add chat_id</code>
-                OR                  - To Connect A Group With A Channel (Bot Should Be Admin With Full Previlages In Both Group And Channel)
+                OR                  - ဂရုနဲ့ ချယ်နယ် ချိတ်ဖို အတွက် ဒီ အမိန့်ကို သုံးရမယ် (အက်တမင်က နှစ်နေရာလုံးပေးနော်)
      <code>/add @Username</code>
      
     👉 <code>/del chat_id</code>
-                OR                  - To disconnect A Group With A Channel
+                OR                  - ချယ်နယ်နဲ့ ဂရုချိတ်တာကို ဖြုတ်ဖို
      <code>/del @Username</code>
      
-    👉 <code>/delall</code>  - This Command Will Disconnect All Connected Channel With The Group And Deletes All Its File From DB
+    👉 <code>/delall</code>  - ချယ်နယ်ရော ဂရုရော မှတ်ညဏ်ထဲသိမ်းထားသမျှ ဖိုင်တွေအကုန်ဖျက်ဖို ဒါကိုသုံးရမယ်
     
-    👉 <code>/settings</code> -  This Command Will Display You A Settings Pannel Instance Which Can Be Used To Tweek Bot's Settings Accordingly
+    👉 <code>/settings</code> - ဆက်တင်ချိန်ဖို ခလုပ်တွေ ကြည့်ဖို ဒါနှိပ်ရမယ်
 
-🔰 𝐒𝐄𝐓𝐓𝐈𝐍𝐆 𝐏𝐀𝐍𝐄𝐋
+🔰 ဆက်တင်ချိန်ဖို ခလုပ်တွေ
 
-            👉 <code>Channel</code> - Button Will Show You All The Connected Chats With The Group And Will Show Buttons Correspnding To There Order For Furthur Controls
+            👉 <code>Channel</code> - ယခုဂရုနဲ့ ချယ်နယ် ဘယ်လောက်ချိတ်ထားသလဲ ဆိုတာပြမယ့်အပြင် သက်ဆိုင်ရာချယ်နယ်တစ်ခုချင်းဆီအလိုက် နံပါတ်စဥ်လိုက်ခလုပ်များနှင်ပြသပေးမယ်။ထိုပြင် ယာယီဖြုတ်မယ်/ပြန်ချိတ်မည်(ချယ်နယ်) တိုကိုလည်းပြုလုပ်နိုင်သည်။
             
-            👉 <code>Filter Types</code> - Button Will Show You The 3 Filter Option Available In Bot... Pressing Each Buttons Will Either Enable or Disable Them And This Will Take Into Action As Soon As You Use Them Without The Need Of A Restart
+            👉 <code>Filter Types</code> - ဘော့ရဲ့ အလုပ်လုပ်မယ် အပိုင်းပါ။ သွားမကလိပါနဲ့။အော်တိုင်းပဲထားပါ။
 
-            👉 <code>Configure</code> - Button Will Helps You To Change No. of Pages/ Buttons Per Page/ Total Result Without Acutally Editing The Repo... Also It Provide Option To Enable/Disable For Showing Invite Link In Each Results
+            👉 <code>Configure</code> - စုစုပေါင်း အဖြေစာမျက်နှာ၊တစ်မျက်နှာမှာပြမယ်ခလုပ်အရေအတွက်၊ ပီးတော့ အင်ဗိုက်လင့်ထုတ်ပေး/မပေး၊ ထိုပြင် ပါစင်နယ်ကနေပို/မပို။ စသည်တိုကို ဘော့ရီစတက် မလုပ်ရဘဲနဲ့ ချက်ချင်းပြောင်း လဲနိုင်သည်။ Results
             
-            👉 <code>Status</code> - Button Will Shows The Stats Of Your Channel
+            👉 <code>Status</code> - ဒါကတော့ ချိတ်ထားတဲ့ ချယ်နယ်နဲ့ စုစုပေါင်းဘယ်လောက်ရှိတယ် ဘာညာ ကိုပြပေးတာပေါ့။(မသိလဲရပါတယ်)
             
 <b><a href="https://t.me/allserieslinkchnel_rainbow">©️ Rainbow_CH</a></b>
 """
