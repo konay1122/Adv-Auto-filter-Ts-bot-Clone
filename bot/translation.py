@@ -5,12 +5,12 @@
 class Translation(object):
     
     START_TEXT = """
-😅 Hai {}, 
+😅 ဝေး {}, 
 
-I am a filter bot with advanced features 
-currently working for @{} 
+ကျွန်ုပ်ကတော့အော်တို Filter ဘော့ကိုအဆင့်မြင့်သောလုပ်ဆောင်ချက်များနှင့်
+ သူ့အတွက်အလုပ်လုပ်နေတာပါ။ @{} 
 
-⚜️ 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 👉 @{}
+⚜️ �တီထွင်ဖန်တီးသူ 👉 @{}
 """   
     
     HELP_TEXT = """
@@ -49,22 +49,22 @@ currently working for @{}
 """
     
     ABOUT_TEXT = """
-📕 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 ,
-\n○ ᴍʏ ɴᴀᴍᴇ : {}
+📕 �ကျွန်ုပ် အကြောင်း ,
+\n○ ကျွန်ုပ် နာမည် : {}
 
-○ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 
+○ ဘာသာ : ᴘʏᴛʜᴏɴ 
 
-○ ғʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏʀᴏɢʀᴀᴍ 
+○ ဖွဲစည်းမှု : ᴘʏʀᴏɢʀᴀᴍ 
 
-○ sᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ 
+○ ဆာဗာ : ʜᴇʀᴏᴋᴜ 
 
-○ ᴠᴇʀsɪᴏɴ : 1.0.0
+○ ဗားရှင်း : 1.0.0
 
-○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone)
+○ ပင်ရင်းကုတ် : [ᴄʟɪᴄᴋ ʜᴇʀᴇ 🥰](https://github.com/konay1122/Adv-Auto-filter-Ts-bot-Clone)
 
-○ ᴄʀᴇᴀᴛᴏʀ : [@N_A_S](https://t.me/nas0055)
+○ ဖိုးစိတ်ဖြူ : [@N_A_S](https://t.me/nas0055)
 
-**ᴜᴘᴅᴀᴛᴇᴅ ᴏɴ 15-12-21 Myanmar ᴛɪᴍᴇ 3:40 ᴘᴍ**
+**မြန်မာစံတော်ချိန် ည ၁၁နာရီ ၂၃မိနစ် ဒီဇင်ဘာ ၁၇ရက်နေ့တွင် အဆင်မြှင့်ထားခဲ့သည်**
 
 **[©Rainbow_CH](https://t.me/allserieslinkchnel_rainbow)**
 """
